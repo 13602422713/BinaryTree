@@ -2,6 +2,7 @@
 #include <vector>
 #include "BinaryTree.h"
 #include "BinarySearchTree.h"
+#include "AVLTree.h"
 
 using namespace std;
 

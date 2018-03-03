@@ -35,6 +35,10 @@ public:
 	void NodePreorderTraversal();
 	void NodeInorderTraversal();
 	void NodeSubsequentTraversal();
+	
+	//use in balance tree.
+	int getBalanceFactor();
+	bool setBalanceFactor(int balance);
 
 private:
 	int m_iIndex;
@@ -42,8 +46,10 @@ private:
 	BiTreeNode *m_pParent;
 	BiTreeNode *m_pLeftChild;
 	BiTreeNode *m_pRightChild;
-
 	//struct NodeWidth<T> stNodeWidth;
+
+	//use in balance tree.
+	int m_iBalancefactor;
 };
 
 template <typename T>
@@ -390,6 +396,18 @@ void BiTreeNode<T>::NodeSubsequentTraversal()
 	}
 
 	cout<<"Index:"<<this->getIndex()<<";Data:"<<this->getData()<<endl;
+}
+
+template <typename T>
+int BiTreeNode<T>::getBalanceFactor()
+{
+	return m_iBalancefactor;
+}
+
+template <typename T>
+bool BiTreeNode<T>::setBalanceFactor(int balance)
+{
+	m_iBalancefactor = balance.
 }
 
 #endif

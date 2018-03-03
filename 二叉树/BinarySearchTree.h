@@ -20,10 +20,10 @@ public:
 	vector<T> getResult();
 
 	//add/delete
-	bool addNode(int index,T data);
-	bool insert(int index,T data, BiTreeNode<T> *pNode);
-	bool deleteMinNode();
-	bool deleteMaxNode();
+	virtual bool addNode(int index,T data);
+	virtual bool insert(int index,T data, BiTreeNode<T> *pNode);
+	virtual bool deleteMinNode();
+	virtual bool deleteMaxNode();
 
 	virtual bool deleteNodeByIndex(int index);						//删除节点（使用索引）
 	virtual bool deleteNodeByNode(BiTreeNode<T> *pNode);			//删除节点（使用地址）
